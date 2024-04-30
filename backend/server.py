@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect
+from flask import Flask, jsonify, redirect
 from factorization import Factorization
 import time
 from flask_sqlalchemy import SQLAlchemy
