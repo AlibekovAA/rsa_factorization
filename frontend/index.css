@@ -1,0 +1,151 @@
+:root {
+    --main-size: min(90vh, 120vw);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #545E75;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url('./assets/bg.jpg');
+    background-position: center top;
+}
+
+.content {
+    display: none;
+    aspect-ratio: 1/1;
+    height: var(--main-size);
+    backdrop-filter: blur(10px);
+    border-radius: 3em;
+    background: #F9F5FF66;
+    margin: auto;
+    /* margin-top: calc(var(--main-size) / 2); */
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    transition: .3s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input::placeholder {
+    color: #f9f5ffa2;
+}
+
+#payload {
+    width: 90%;
+    max-width: 90%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #545e75;
+    color: #F9F5FF;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+button {
+    background: #545E75;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 1em;
+    padding: .5em 1.5em;
+    color: #F9F5FF;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 1em; 
+}
+
+button:hover {
+    padding: .7em 1.5em;
+}
+
+.button-container {
+    display: flex;
+    gap: 1.5em;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    width: 70%;
+    animation: rotate .5s ease-out infinite;
+}
+
+#result-title {
+    font-size: 2em;
+    color: #F9F5FF;
+}
+
+#result, #result-time {
+    font-size: 1.5em;
+    color: #F9F5FF;
+}
+
+#error {
+    font-size: 1.5em;
+    color: #A4303F;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

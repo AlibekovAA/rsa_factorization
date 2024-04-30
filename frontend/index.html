@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <main class="content" data-stage="payload">
+        <input type="number" placeholder="Enter number" id="payload">
+        <div class="button-container">
+            <button id="factorize-btn" onclick="callFactorization()">Factorize</button>
+            <button id="help-btn" onclick="openHelp()">Help</button>
+            <button id="history-btn" onclick="showHistory()">History requests</button>
+        </div>
+    </main>
+    <main class="content" data-stage="loading">
+        <img src="./assets/loader.png" id="loader">
+    </main>
+    <main class="content" data-stage="result">
+        <h3 id="result-title">Result for </h3>
+        <span id="result"></span>
+        <span id="result-time">time taken: </span>
+        <button id="reset-btn" onclick="resetApp()">Reset</button>
+    </main>
+    <main class="content" data-stage="error">
+        <h3 id="error">Error: </h3>
+    </main>
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelp()">&times;</span>
+            <h2>About Factorization</h2>
+            <p>
+                This is a simple web application for factorizing numbers using the Pollard Rho algorithm.
+                <br>
+                Created by AlibekovAA.
+                <br>
+                <br>
+                To factorize a number, simply enter it into the input field and click the "Factorize" button.
+                <br>
+                The factors of the number along with the time taken to factorize will be displayed.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
